@@ -1,0 +1,35 @@
+<html>
+   <head>
+    <title>Angular 2 Operation</title> 
+  </head> 
+  <body>
+    <div class="container">
+      <p>Angular 2 Operation</p> 
+      <h1>ADD EMPLOYEE</h1>
+      <div class="row">
+        <table>
+          <tr>
+       <td> <label for="id">ID</label></td>
+       </tr>
+       <tr>
+     <td><label class="name"> Name</label></td>
+     <input type="text" name="name" #name/>
+     </tr>
+     <tr>
+      <td> <label class="salary">Salary</label></td>
+         <input type="text" name="salary" #salary>
+      </tr>
+      <tr>
+        <td> <label class="depart">Department</label></td>
+           <input type="text" name="depart" #depart>
+        </tr>
+      <tr>
+      <td><button type="button" (click)="save(id,name,salary,depart)">Add Employee</button>
+      </tr>
+      </table>
+      <p>{{id.value}} {{name.value}} {{salary.value}} {{dep.value}}</p>
+      <div class="alert alert-warning" role="alert"></div>
+  </div>
+  </div>
+  </body>
+</html>

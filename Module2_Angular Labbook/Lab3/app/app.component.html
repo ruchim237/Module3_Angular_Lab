@@ -1,0 +1,95 @@
+<br/><br/>
+<form [formGroup]="addForm" (ngSubmit)="addProduct()">
+   <div class="container">
+  <div class="form-group row">
+    <label for="productId" class="col-lg-2 text-info text right">
+      Product ID:
+    </label>
+    <div class="col-lg-3">
+      <input type="number" class="form-control" formControlName="productId" /> 
+                 <div *ngIf="submitted && addForm.controls.productId.errors">
+                   <div class="text-danger" *ngIf="addForm.controls.productId.errors.required">
+        Product ID is required!!
+     </div>    
+    </div>
+</div>
+</div>
+<div class="form-group row">
+  <label for="productName" class="col-lg-2 text-info text right">
+    Product Name:
+  </label>
+  <div class="col-lg-3">
+    <input type="text" class="form-control" formControlName="productName" /> 
+               <div *ngIf="submitted && addForm.controls.productName.errors">
+                <div class="text-danger" *ngIf="addForm.controls.productName.errors.required">
+      Product Name is required!!
+   </div>    
+  </div>
+</div>
+</div>
+<div class="form-group row">
+<label for="productCost" class="col-lg-2 text-info text right">
+  Product Cost:
+</label>
+<div class="col-lg-3">
+  <input type="number" class="form-control" formControlName="productCost" /> 
+             <div *ngIf="submitted && addForm.controls.productCost.errors">
+              <div class="text-danger" *ngIf="addForm.controls.productCost.errors.required">
+    Product Cost is required!!
+ </div>    
+</div>
+</div>
+
+</div> 
+<div class="form-group row">
+  <label class="col-sm-2 col-form-lable">Product Online</label>
+  <div class="col-sm-3">
+    <label class="radio-inline">
+      <input type="radio" name="optradio">Yes 
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">No
+    </label>
+</div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-lable">Product Category</label>
+  <div class="col-sm-3">
+    <select class="form-control">
+      <option selected> </option>
+      <option>Grocery<option>Mobile<option>Electronics<option>Cloths</option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-lable">Available in Store</label>
+  <div class="col-sm-5">
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Big Bazar
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">DMart
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" >Reliance
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" >Mega store
+      </label>
+    </div>
+  </div>
+  </div>
+<div class="form-group">
+<button class="btn btn-success">Add Product</button>.
+</div>
+</div>
+</form> 
